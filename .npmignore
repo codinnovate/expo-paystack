@@ -1,0 +1,20 @@
+# Source is shipped (for the `source`/`react-native` fields), but dev files are not.
+example/
+node_modules/
+
+# Configs
+tsconfig.json
+eslint.config.mjs
+.prettierrc
+.editorconfig
+
+# Tooling
+.github/
+.vscode/
+.idea/
+
+# Misc
+*.log
+.DS_Store
+coverage/
+*.tsbuildinfo

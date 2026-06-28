@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "expo-paystack-example",
+    "slug": "expo-paystack-example",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.expopaystack.example"
+    },
+    "android": {
+      "package": "com.expopaystack.example"
+    },
+    "plugins": ["react-native-webview"],
+    "extra": {
+      "note": "Replace PAYSTACK_TEST_KEY in App.tsx with your own pk_test_ key."
+    }
+  }
+}
