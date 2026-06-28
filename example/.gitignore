@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Expo
+.expo/
+.expo-shared/
+web-build/
+dist/
+
+# Generated native projects (CNG — run `npx expo prebuild` to regenerate)
+/ios/
+/android/
+
+# macOS
+.DS_Store
+*.log

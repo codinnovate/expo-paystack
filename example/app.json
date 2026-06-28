@@ -13,7 +13,6 @@
     "android": {
       "package": "com.expopaystack.example"
     },
-    "plugins": ["react-native-webview"],
     "extra": {
       "note": "Replace PAYSTACK_TEST_KEY in App.tsx with your own pk_test_ key."
     }

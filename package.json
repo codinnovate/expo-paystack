@@ -54,10 +54,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/expo-paystack.git"
+    "url": "git+https://github.com/codinnovate/expo-paystack.git"
   },
-  "author": "",
+  "homepage": "https://github.com/codinnovate/expo-paystack#readme",
+  "bugs": {
+    "url": "https://github.com/codinnovate/expo-paystack/issues"
+  },
+  "author": "Sam Adeyemi <adeyemis710@gmail.com>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=18"
   },

@@ -81,17 +81,21 @@ approach.
 npx expo install expo-paystack react-native-webview
 ```
 
-`react-native-webview` is a peer dependency and ships a config plugin. Make sure
-it is listed in your `app.json` (or `app.config.js`):
+`react-native-webview` is a peer dependency. It is autolinked, so it does **not**
+need a config-plugin entry — just make sure the New Architecture is enabled in
+your `app.json` (or `app.config.js`):
 
 ```json
 {
   "expo": {
-    "plugins": ["react-native-webview"],
     "newArchEnabled": true
   }
 }
 ```
+
+> **Note:** Do not add `"react-native-webview"` to your `plugins` array.
+> It does not export an Expo config plugin, and listing it there will make
+> `expo run:ios` / `run:android` fail with a `PluginError`.
 
 Then create a development build (the WebView requires native code, so it does
 **not** run in Expo Go on its own — use `npx expo run:ios` / `run:android` or an
@@ -357,8 +361,9 @@ public API, including `PaystackTransaction`, `PaystackPaymentConfig`,
 ## FAQ
 
 **The WebView shows a blank/loading screen forever.**
-Ensure `react-native-webview` is installed and listed under `plugins` in
-`app.json`, and that you are running a development build (not plain Expo Go).
+Ensure `react-native-webview` is installed and that you are running a
+development build (not plain Expo Go). Do **not** add it to `plugins` — it is
+autolinked and has no config plugin.
 
 **"Reference already used / duplicate reference" error.**
 Each transaction needs a unique reference. Omit `reference` to let the package
@@ -391,7 +396,7 @@ component flow, mobile money, and the currency helpers. Add your own
 Contributions are welcome! To get started:
 
 ```bash
-git clone https://github.com/your-org/expo-paystack.git
+git clone https://github.com/codinnovate/expo-paystack.git
 cd expo-paystack
 npm install
 npm run build       # build with react-native-builder-bob
@@ -399,11 +404,20 @@ npm run typecheck   # tsc --noEmit
 npm run lint        # eslint
 ```
 
-Please open an issue to discuss substantial changes before sending a PR, and
-keep the strict-TypeScript / zero-`any` bar intact.
+Please [open an issue](https://github.com/codinnovate/expo-paystack/issues) to
+discuss substantial changes before sending a PR, and keep the strict-TypeScript /
+zero-`any` bar intact.
+
+---
+
+## Support
+
+- 🐛 **Bugs & feature requests:** [GitHub Issues](https://github.com/codinnovate/expo-paystack/issues)
+- 📦 **Source & releases:** [github.com/codinnovate/expo-paystack](https://github.com/codinnovate/expo-paystack)
+- ✉️ **Contact the maintainer:** [adeyemis710@gmail.com](mailto:adeyemis710@gmail.com)
 
 ---
 
 ## License
 
-[MIT](./LICENSE) © expo-paystack contributors
+[MIT](./LICENSE) © [Sam Adeyemi](https://github.com/codinnovate)
