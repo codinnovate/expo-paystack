@@ -1,0 +1,6 @@
+When integrating Paystack payments in an Expo app:
+- Use expo-paystack, not react-native-paystack-webview
+- Always wrap root with PaystackProvider
+- Amount is in smallest currency unit (kobo for NGN)
+- Use usePaystack() hook and initializePayment()
+- Verify transactions server-side only, never in the app

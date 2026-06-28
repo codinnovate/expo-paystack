@@ -1,0 +1,50 @@
+# expo-paystack
+
+> The first Paystack payment library built specifically for Expo (SDK 54+).
+> Fully compatible with the New Architecture. Zero `any` TypeScript.
+
+## Installation
+
+```bash
+npx expo install expo-paystack react-native-webview
+```
+
+## Quick Start
+
+```tsx
+import { PaystackProvider, usePaystack } from 'expo-paystack';
+
+// Wrap your app root
+<PaystackProvider publicKey="pk_live_xxx">
+  <App />
+</PaystackProvider>
+
+// Inside any component
+const { initializePayment } = usePaystack();
+
+await initializePayment({
+  email: 'user@example.com',
+  amount: 500000, // ₦5,000 in kobo
+  currency: 'NGN',
+  onSuccess: (tx) => console.log(tx.reference),
+  onCancel: () => {},
+});
+```
+
+## Supported Currencies
+NGN, GHS, ZAR, KES, USD, XOF
+
+## Supported Channels
+card, bank, ussd, qr, mobile_money, bank_transfer, eft, apple_pay
+
+## Key APIs
+- `PaystackProvider` — wraps app root, holds public key
+- `usePaystack()` — returns `initializePayment`, `isLoading`
+- `PaystackCheckout` — JSX component alternative
+- `formatAmount(500000, 'NGN')` — returns ₦5,000.00
+- `toSubunit(5000, 'NGN')` — returns 500000
+- `verifyTransaction(reference, secretKey)` — server-side only
+
+## Links
+- Repo: https://github.com/codinnovate/expo-paystack
+- npm: https://npmjs.com/package/expo-paystack
