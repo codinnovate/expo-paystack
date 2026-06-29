@@ -1,6 +1,6 @@
 {
   "name": "expo-paystack",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The easiest way to integrate Paystack payments into your Expo app. Supports card, bank transfer, USSD, mobile money, and more. Built for Expo and the New Architecture.",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",
