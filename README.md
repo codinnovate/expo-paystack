@@ -1,17 +1,10 @@
 <div align="center">
 
-```
-  ███████╗██╗  ██╗██████╗  ██████╗
-  ██╔════╝╚██╗██╔╝██╔══██╗██╔═══██╗   ██████╗  █████╗ ██╗   ██╗
-  █████╗   ╚███╔╝ ██████╔╝██║   ██║   ██╔══██╗██╔══██╗╚██╗ ██╔╝
-  ██╔══╝   ██╔██╗ ██╔═══╝ ██║   ██║   ██████╔╝███████║ ╚████╔╝
-  ███████╗██╔╝ ██╗██║     ╚██████╔╝   ██╔═══╝ ██╔══██║  ╚██╔╝
-  ╚══════╝╚═╝  ╚═╝╚═╝      ╚═════╝    ██║     ██║  ██║   ██║
-                                      ╚═╝     ╚═╝  ╚═╝   ╚═╝
-              e x p o - p a y s t a c k
-```
+<h1>💳 expo-paystack</h1>
 
-**The easiest way to accept Paystack payments in your Expo app.**
+<p><strong>The easiest way to accept Paystack payments in your Expo app.</strong></p>
+
+<p><em>Card · Bank transfer · USSD · QR · Mobile money — built for Expo &amp; the New Architecture.</em></p>
 
 [![npm version](https://img.shields.io/npm/v/expo-paystack.svg)](https://www.npmjs.com/package/expo-paystack)
 [![license](https://img.shields.io/npm/l/expo-paystack.svg)](./LICENSE)
