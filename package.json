@@ -30,7 +30,7 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "node api.js && bob build",
+    "build": "bob build",
     "clean": "rimraf lib",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
